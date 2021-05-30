@@ -1,0 +1,33 @@
+{
+    "mail.ru": {
+        "main_url": "https://news.mail.ru/",
+        "incidents_groups": ["//div[contains(@class, 'daynews__item')]//@href",
+                             "//a[contains(@class,'list__text')]//@href",
+                             "//a[contains(@class,'newsitem__title link-holder')]//@href",
+                             "//a[contains(@class,'link link_flex')]//@href"],
+        "xpaths": {
+            "name": "//h1/text()",
+            "datetime": "//span[@class='note__text breadcrumbs__text js-ago']/@datetime",
+            "source": "//a[@class='link color_gray breadcrumbs__link']//text()"
+        }
+    },
+    "lenta.ru": {
+        "main_url": "https://lenta.ru/",
+        "incidents_groups": ["//a[starts-with(@href,'/news/')]//@href"],
+        "xpaths": {
+            "name": "//h1[@class='b-topic__title']/text()",
+            "datetime": "//div[@class='b-topic__info']/time/@datetime",
+            "source": "//a[@class='source']/text()"
+        }
+    },
+    "yandex.ru": {
+        "main_url": "https://yandex.ru/news",
+        "incidents_groups": ["//article"],
+        "xpaths": {
+            "name": ".//h2/text()",
+            "datetime": ".//span[@class='mg-card-source__time']/text()",
+            "source": ".//a[@class='mg-card__source-link']/text()",
+            "link": ".//a[@class='mg-card__link']/@href"
+        }
+    }
+}
