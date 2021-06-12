@@ -120,3 +120,9 @@ class LeroymerlinPhotosPipeline(ImagesPipeline):
 
     #def file_path(self, request, response=None, info=None, *, item=None):
         #return path_to_saved_file
+
+
+class InstaparserPipeline:
+    def process_item(self, item, spider):
+        print()
+        return item

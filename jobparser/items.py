@@ -49,3 +49,12 @@ class LeroymerlinItem(scrapy.Item):
     link = scrapy.Field(output_processor=TakeFirst())
     params = scrapy.Field(input_processor=MapCompose(process_param))
     _id = scrapy.Field()
+
+
+class InstaparserItem(scrapy.Item):
+    name = scrapy.Field()
+    user_id = scrapy.Field()
+    photo = scrapy.Field()
+    likes = scrapy.Field()
+    post_data = scrapy.Field()
+    _id = scrapy.Field()
