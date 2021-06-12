@@ -5,12 +5,14 @@ from jobparser import settings
 from jobparser.spiders.hhru import HhruSpider
 from jobparser.spiders.superjob import SuperjobSpider
 from jobparser.spiders.leroymerlin import LeroymerlinSpider
+from jobparser.spiders.instagram import InstagramSpider
 
 if __name__ == '__main__':
     crawler_settings = Settings()
     crawler_settings.setmodule(settings)
 
     process = CrawlerProcess(settings=crawler_settings)
-    process.crawl(LeroymerlinSpider, query='sadovaya-mebel')
+    #process.crawl(LeroymerlinSpider, query='sadovaya-mebel')
+    process.crawl(InstagramSpider)
 
     process.start()
